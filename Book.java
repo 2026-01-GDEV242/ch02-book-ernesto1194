@@ -57,6 +57,15 @@ public void printTitle()
 
 public void printDetails()
 {
+    String refToPrint;
+    
+    if(refNumber.length() >0 ){
+        refToPrint = refNumber;
+    } else {
+        refToPrint = "ZZZ";
+    }
+    
+    
     System.out.println(
         "Title: " + title
         + ", Author: " + author
