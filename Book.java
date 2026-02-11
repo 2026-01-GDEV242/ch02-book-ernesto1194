@@ -44,7 +44,6 @@ public int getPages()
     return pages;
 }
    
-
 public void printAuthor()
 {   
     System.out.println(author);
@@ -70,20 +69,23 @@ public void printDetails()
         "Title: " + title
         + ", Author: " + author
         + ", Pages: " + pages
-        + ", Ref#: " + refNumber
+        + ", Ref#: " + refToPrint
     );
 }
 
-
 public void setRefNumber(String ref)
 {   
-    refNumber = ref;
+    if (ref.length() >= 3) {
+        refNumber = ref; 
+    } else {
+        System.out.println("Error: Reference number must be at least 3 characters.");
+    }
 }
-
+    
 public String getRefNumber()
 {
     return refNumber;
 }
 
-
 }
+
